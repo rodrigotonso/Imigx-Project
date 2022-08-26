@@ -3,7 +3,7 @@ import Layout from "src/layouts/Layout"
 function App() {
   return (
     <>
-    <Layout></Layout>
+    <Layout><p>Image Component</p></Layout>
     </>
   )
 }
