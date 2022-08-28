@@ -5,10 +5,10 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import propsImageCard from "src/interfaces/components";
-import { imgCardStyles } from "./styles";
+import { useImgCardStyles } from "./styles";
 
 const ImgCard = ({imgURL}:propsImageCard) => {
-    const s = imgCardStyles();
+    const s = useImgCardStyles();
     return (
         <Card sx={{ maxWidth: 345 }} className={s.imageCard}>
             <CardMedia
