@@ -1,9 +1,11 @@
 import { AppBar, IconButton, Toolbar } from "@mui/material";
 import { Undo, Redo, History, Collections } from "@mui/icons-material";
 import { useNavBarStyles } from "./styles";
+import { useLayout } from "src/contexts";
 
 const NavBar = () => {
     const s = useNavBarStyles();
+    const { showSideBar } = useLayout();
 
     return (
         <AppBar className={s.appBar}>
@@ -23,6 +25,7 @@ const NavBar = () => {
                     <IconButton
                         aria-label="collections"
                         className={s.menuButton}
+                        onClick={showSideBar}
                     >
                         <Collections className={s.iconButton} />
                     </IconButton>

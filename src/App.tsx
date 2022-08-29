@@ -1,11 +1,14 @@
 import Layout from "src/layouts/Layout";
 import ImageGallery from "src/pages/imageGallery/ImageGallery";
+import LayoutProvider from "src/contexts";
 
 function App() {
     return (
-        <Layout>
-            <ImageGallery />
-        </Layout>
+        <LayoutProvider>
+            <Layout>
+                <ImageGallery />
+            </Layout>
+        </LayoutProvider>
     );
 }
 

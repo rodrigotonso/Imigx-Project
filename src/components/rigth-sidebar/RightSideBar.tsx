@@ -1,23 +1,20 @@
-import { SwipeableDrawer } from "@mui/material";
-import { useState } from "react";
+import { Drawer, SwipeableDrawer } from "@mui/material";
+import { useLayout } from "src/contexts";
 import { useRightSideBarStyles } from "./styles";
 
 const RightSideBar = () => {
     const s = useRightSideBarStyles();
-    const [show, setShow] = useState(true);
+    const { visibleSideBar, showSideBar } = useLayout();
+
     return (
-        <div className={s.sideBar}>
-            <SwipeableDrawer
-                anchor="right"
-                open={show}
-                onClose={() => setShow(!show)}
-                onOpen={() => setShow(!show)}
-                onClick={() => setShow(!show)}
-                className={s.drawer}
-            >
-                <p></p>
-            </SwipeableDrawer>
-        </div>
+        <Drawer
+            anchor="right"
+            open={visibleSideBar || false}
+            onClose={showSideBar}
+            onKeyDown={showSideBar}
+            onClick={showSideBar}
+            className={s.drawer}
+        ></Drawer>
     );
 };
 
