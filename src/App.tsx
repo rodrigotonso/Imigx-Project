@@ -1,12 +1,12 @@
 import Layout from "src/layouts/Layout";
-import ImageGallery from "src/pages/imageGallery/ImageGallery";
+import ImageEdit from "src/pages/imageEdit/ImageEdit";
 import LayoutProvider from "src/contexts";
 
 function App() {
     return (
         <LayoutProvider>
             <Layout>
-                <ImageGallery />
+                <ImageEdit />
             </Layout>
         </LayoutProvider>
     );

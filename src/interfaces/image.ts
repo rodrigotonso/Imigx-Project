@@ -1,5 +1,6 @@
 export default interface propsImageCard {
     url: string;
+    name?: string;
     style?: {
         height?: number;
         width?: number;

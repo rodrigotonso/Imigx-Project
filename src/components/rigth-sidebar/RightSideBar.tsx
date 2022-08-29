@@ -1,8 +1,9 @@
-import { Drawer, SwipeableDrawer } from "@mui/material";
+import { Drawer } from "@mui/material";
 import { useLayout } from "src/contexts";
+import propsWithChildren from "src/interfaces/react";
 import { useRightSideBarStyles } from "./styles";
 
-const RightSideBar = () => {
+const RightSideBar = ({children}: propsWithChildren) => {
     const s = useRightSideBarStyles();
     const { visibleSideBar, showSideBar } = useLayout();
 
@@ -14,7 +15,7 @@ const RightSideBar = () => {
             onKeyDown={showSideBar}
             onClick={showSideBar}
             className={s.drawer}
-        ></Drawer>
+        >{children}</Drawer>
     );
 };
 
