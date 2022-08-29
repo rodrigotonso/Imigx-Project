@@ -1,11 +1,10 @@
 import Layout from "src/layouts/Layout";
-import ImgCard from "./components/img-card";
+import ImageGallery from "src/pages/imageGallery/ImageGallery";
 
 function App() {
-    console.log(window.location.href)
     return (
         <Layout>
-            <ImgCard url='https://assets.imgix.net/unsplash/alarmclock.jpg'/>
+            <ImageGallery />
         </Layout>
     );
 }
