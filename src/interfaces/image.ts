@@ -6,6 +6,7 @@ export default interface propsImageCard {
         width?: number;
     };
     title?: string;
+    handleClick?: any;
 }
 
 export default interface propsImageList {
