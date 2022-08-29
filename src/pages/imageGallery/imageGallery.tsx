@@ -1,5 +1,6 @@
+import ImgCard from "src/components/img-card";
+
 export default function imageGallery() {
-  return (
-    <div>imageGallery</div>
-  )
+    const url = "";
+    return <ImgCard imgURL={url} size={{ heigth: 100 }} />;
 }
