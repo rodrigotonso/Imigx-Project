@@ -8,6 +8,7 @@ const initialState = {
     },
     historyImage: [],
     orientation: 1,
+    brightness:0,
 };
 
 export const imagesSlice = createSlice({
@@ -20,13 +21,18 @@ export const imagesSlice = createSlice({
         },
         rotateImage: (state) => {
             state.orientation = newOrientation(state.orientation)
-
             const url = new URL(state.selectedImage.url)
             url.searchParams.set('orient', state.orientation.toString());
+            state.selectedImage.url = url.href
+        },
+        setBrightness: (state, action: PayloadAction<number>) => {
+            state.brightness = action.payload
+            const url = new URL(state.selectedImage.url)
+            url.searchParams.set('bri', state.brightness.toString());
             state.selectedImage.url = url.href
         },
     },
 });
 
-export const { setSelectedImage, rotateImage } = imagesSlice.actions;
+export const { setSelectedImage, rotateImage, setBrightness } = imagesSlice.actions;
 export default imagesSlice.reducer;

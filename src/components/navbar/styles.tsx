@@ -15,5 +15,10 @@ export const useNavBarStyles = makeStyles((theme: Theme) =>
         iconButton: {
             color:"white",
         },
+        editButtons:{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-around",
+        }
     })
 );
