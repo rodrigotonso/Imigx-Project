@@ -2,6 +2,10 @@ import { AppBar, IconButton, Toolbar } from "@mui/material";
 import { Undo, Redo, History, Collections } from "@mui/icons-material";
 import { useNavBarStyles } from "./styles";
 import { useLayout } from "src/contexts";
+import HistoryButton from "./buttons/HistoryButton";
+import UndoButton from "./buttons/UndoButton";
+import RedoButton from "./buttons/RedoButton";
+import RotateButton from "./buttons/RotateButton";
 
 const NavBar = () => {
     const s = useNavBarStyles();
@@ -11,15 +15,14 @@ const NavBar = () => {
         <AppBar className={s.appBar}>
             <Toolbar className={s.toolbar}>
                 <div>
-                    <IconButton aria-label="history" className={s.menuButton}>
-                        <History className={s.iconButton} />
-                    </IconButton>
-                    <IconButton aria-label="undo" className={s.menuButton}>
-                        <Undo className={s.iconButton} />
-                    </IconButton>
-                    <IconButton aria-label="redo" className={s.menuButton}>
-                        <Redo className={s.iconButton} />
-                    </IconButton>
+                    <HistoryButton />
+                    <UndoButton />
+                    <RedoButton />
+                </div>
+                <div>
+                    <RotateButton />
+                    <UndoButton />
+                    <RedoButton />
                 </div>
                 <div>
                     <IconButton
