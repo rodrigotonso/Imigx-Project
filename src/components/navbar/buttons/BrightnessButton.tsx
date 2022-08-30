@@ -7,7 +7,7 @@ import { setBrightness } from "src/store/slices/imagesSlice";
 
 export default function BrightnessButton() {
     const s = useNavBarButtonsStyles();
-    const [showSlider, setShowSlider] = useState(false);
+    const [showSlider, setShowSlider] = useState(true);
     const dispatch = useDispatch();
     const bright = useSelector((state: RootState) => state.images.brightness)
 

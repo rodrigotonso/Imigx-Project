@@ -7,6 +7,7 @@ import UndoButton from "./buttons/UndoButton";
 import RedoButton from "./buttons/RedoButton";
 import RotateButton from "./buttons/RotateButton";
 import BrightnessButton from "./buttons/BrightnessButton";
+import InvertButton from "./buttons/InvertButton";
 
 const NavBar = () => {
     const s = useNavBarStyles();
@@ -23,7 +24,7 @@ const NavBar = () => {
                 <div className={s.editButtons}>
                     <RotateButton />
                     <BrightnessButton />
-                    <RedoButton />
+                    <InvertButton />
                 </div>
                 <div>
                     <IconButton

@@ -9,6 +9,7 @@ const initialState = {
     historyImage: [],
     orientation: 1,
     brightness:0,
+    invert: false,
 };
 
 export const imagesSlice = createSlice({
@@ -31,8 +32,14 @@ export const imagesSlice = createSlice({
             url.searchParams.set('bri', state.brightness.toString());
             state.selectedImage.url = url.href
         },
+        invertImage: (state) => {
+            state.invert = !state.invert
+            const url = new URL(state.selectedImage.url)
+            url.searchParams.set('invert', state.invert.toString());
+            state.selectedImage.url = url.href
+        },
     },
 });
 
-export const { setSelectedImage, rotateImage, setBrightness } = imagesSlice.actions;
+export const { setSelectedImage, rotateImage, setBrightness, invertImage} = imagesSlice.actions;
 export default imagesSlice.reducer;
