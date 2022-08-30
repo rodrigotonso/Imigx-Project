@@ -15,7 +15,6 @@ export default function BrightnessButton() {
         let bright = !value ? 0 : value > 100 ? 100 : value;
         dispatch(setBrightness(bright));
     };
-    console.log(bright)
 
     return (
         <>
